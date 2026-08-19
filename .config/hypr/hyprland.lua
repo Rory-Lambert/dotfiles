@@ -17,6 +17,7 @@ require("default.hypr.omarchy")
 -- defaults so package updates can improve the defaults without rewriting your
 -- ~/.config/hypr files.
 require("hypr.monitors")
+require("monitors") -- satisfies hyprmoncfg's include check; see ~/.config/monitors.lua
 require("hypr.input")
 require("hypr.bindings")
 require("hypr.looknfeel")
