@@ -31,3 +31,10 @@ require("default.hypr.toggles")
 
 -- Migrated from hyprland.conf: keep the FABRIC app in its own special workspace.
 o.window({ title = "FABRIC" }, { workspace = "special:fabric" })
+
+-- Pin the special-workspace webapps to their own special workspaces. Matched
+-- by class (chrome-<host>__-Default) since their window titles change with
+-- app state (e.g. Teams shows unread-chat counts in the title).
+o.window({ class = "chrome-teams.microsoft.com" }, { workspace = "special:msftteams" })
+o.window({ class = "chrome-tidal.com" }, { workspace = "special:tidal" })
+o.window({ class = "chrome-outlook.office.com" }, { workspace = "special:outlook" })
